@@ -7,7 +7,12 @@ search_phrase = search_site + argv[1]
 
 print(search_phrase)
 
-start_chrome('google.com')
+if argv[2] == 'd':
+    start_chrome('duckduckgo.com')
+elif argv[2] == 'g':
+    start_chrome('google.com')
+else:
+    print('Please enter d or g to choose the search engine')
 
 write(search_phrase)
 
